@@ -1,3 +1,3 @@
-# Docs!
+# NP Frontend
 
 ## Test
