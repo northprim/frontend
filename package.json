@@ -1,0 +1,13 @@
+{
+  "name": "@northprim/frontend",
+  "description": "Tools & Guide by and for NP Frontend.",
+  "workspaces": [
+    "docs",
+    "packages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//northprim/frontend.git"
+  },
+  "private": true
+}
