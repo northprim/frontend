@@ -1,13 +1,14 @@
 {
   "name": "@northprim/frontend",
   "description": "Tools & Guide by and for NP Frontend.",
+  "private": true,
+  "module": "true",
   "workspaces": [
     "docs",
-    "packages"
+    "packages/web-components"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com//northprim/frontend.git"
-  },
-  "private": true
+    "url": "https://github.com/northprim/frontend.git"
+  }
 }

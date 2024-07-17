@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "noEmit": false,
+    "useDefineForClassFields": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force"
+  },
+  "include": [
+    "lib/**/*"
+  ],
+  "exclude": []
+}
