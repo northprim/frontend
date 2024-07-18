@@ -10,5 +10,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/northprim/frontend.git"
+  },
+  "scripts": {
+    "wc:dev": "npm run dev -w @northprim/web-components",
+    "wc:build": "npm run build -w @northprim/web-components",
+    "wc:publish": "npm run publish --dry-run -w @northprim/web-components"
   }
 }
