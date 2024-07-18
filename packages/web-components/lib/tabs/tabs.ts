@@ -1,21 +1,14 @@
-type TabType = 'a' | 'b';
-
 class NpTabs extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'});
     }
 
-    type: TabType = 'a';
-
     connectedCallback() {
         this.render();
     }
 
     render() {
-        this.type = 'b';
-        console.info('render!!');
-        1
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
         <style>
