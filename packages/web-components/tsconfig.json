@@ -13,7 +13,6 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "declaration": true,
-    "noEmit": false,
     "useDefineForClassFields": true,
     "emitDeclarationOnly": true,
     "outDir": "./dist",

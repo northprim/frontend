@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="module" src="lib/tabs/tabs.ts"></script>
+    <script type="module" src="lib/tabs/index.ts"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        np-tab {
+            background: lightblue;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        np-tab[np-selected] {
+            background: darkblue;
+        }
+
+        np-tab:focus-visible {
+            outline: 2px solid orange;
+            z-index: 1;
+        }
+
+        np-tabs::part(tabs) {
+            background: mintcream;
+            border-bottom: 1px solid darkblue;
+        }
+
+        np-tabs::part(content) {
+            padding: 24px;
+            background: lightblue;
+        }
+    </style>
 </head>
 <body>
 <h2>Tabs</h2>
-<np-tabs></np-tabs>
+<np-tabs>
+    <np-tab slot="tab" name="asd">tab1</np-tab>
+    <np-tab slot="tab" name="qwe">tab2</np-tab>
+    <np-tab slot="tab" name="123">tab3</np-tab>
+    <np-tab-panel slot="content" name="asd">
+        tab1 content
+    </np-tab-panel>
+    <np-tab-panel slot="content" name="qwe">
+        tab2 content foo
+    </np-tab-panel>
+    <np-tab-panel slot="content" name="123">
+        Lorem ipsum dolor sit amet.
+    </np-tab-panel>
+</np-tabs>
 </body>
 </html>

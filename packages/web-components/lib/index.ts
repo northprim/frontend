@@ -1,3 +1,3 @@
-import {NpTabs} from "./tabs/tabs";
+import {NpTabs} from "./tabs";
 
 export {NpTabs};
