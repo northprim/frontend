@@ -1,7 +1,16 @@
 {
   "name": "@northprim/web-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Native WebComponents to cover our clients' needs.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northprim/frontend.git",
+    "directory": "packages/web-components"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry":"https://npm.pkg.github.com"
+  },
   "type": "module",
   "main": "./dist/lib/index.cjs",
   "module": "./dist/lib/index.js",
