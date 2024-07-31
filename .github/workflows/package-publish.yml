@@ -4,6 +4,8 @@ on:
     branches: ["main"]
     paths:
       - 'packages/web-components/**'
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
