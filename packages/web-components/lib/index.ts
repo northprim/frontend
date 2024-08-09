@@ -1,3 +1,1 @@
-import {NpTabs} from "./tabs";
-
-export {NpTabs};
+export * from './tabs';

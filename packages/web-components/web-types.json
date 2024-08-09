@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "name": "@northprim/web-components",
+  "version": "0.1.0",
+  "description-markup": "markdown",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "np-tab",
+          "description": "\n---\n",
+          "doc-url": "",
+          "attributes": [],
+          "events": [],
+          "js": { "properties": [{ "name": "onKeySelect" }], "events": [] }
+        },
+        {
+          "name": "np-tab-panel",
+          "description": "\n---\n",
+          "doc-url": "",
+          "attributes": [],
+          "events": [],
+          "js": { "properties": [], "events": [] }
+        },
+        {
+          "name": "np-tabs",
+          "description": "\n---\n\n\n### **Events:**\n \n\n### **Slots:**\n - **tabs** - Slot for np-tab elements\n- **panels** - Slot for np-tab-panel elements\n\n### **CSS Parts:**\n - **tabs** - Styles the np-tab container\n- **content** - Styles the np-tab-panel container",
+          "doc-url": "",
+          "attributes": [],
+          "slots": [
+            { "name": "tabs", "description": "Slot for np-tab elements" },
+            {
+              "name": "panels",
+              "description": "Slot for np-tab-panel elements"
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              { "name": "currentTab", "type": "string | undefined" },
+              { "name": "tabSlotElements", "type": "NpTab[]" },
+              { "name": "panelSlotElements" }
+            ],
+            "events": []
+          }
+        }
+      ]
+    },
+    "css": {
+      "properties": [],
+      "pseudo-elements": [
+        { "name": "part(tabs)", "description": "Styles the np-tab container" },
+        {
+          "name": "part(content)",
+          "description": "Styles the np-tab-panel container"
+        }
+      ]
+    }
+  }
+}

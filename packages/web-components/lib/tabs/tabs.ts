@@ -10,6 +10,14 @@ declare global {
 
 type TabPanelPair = { tab: NpTab; panel: NpTabPanel };
 
+/**
+ * @slot tabs - Slot for np-tab elements
+ * @slot panels - Slot for np-tab-panel elements
+ *
+ * @csspart tabs - Styles the np-tab container
+ * @csspart content - Styles the np-tab-panel container
+ *
+ */
 class NpTabs extends HTMLElement {
 
     private tabs?: Record<string, TabPanelPair>;

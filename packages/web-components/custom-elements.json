@@ -1,0 +1,313 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "lib/tabs/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "NpTabs",
+          "declaration": {
+            "name": "NpTabs",
+            "module": "lib/tabs/index.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "NpTab",
+          "declaration": {
+            "name": "NpTab",
+            "module": "lib/tabs/index.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "NpTabPanel",
+          "declaration": {
+            "name": "NpTabPanel",
+            "module": "lib/tabs/index.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib/tabs/tab.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "NpTab",
+          "members": [
+            {
+              "kind": "field",
+              "name": "onKeySelect"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "npKeyEvents",
+              "module": "/util/mixins"
+            },
+            {
+              "name": "npSelection",
+              "module": "/util/mixins"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "np-tab",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "np-tab",
+          "declaration": {
+            "name": "NpTab",
+            "module": "lib/tabs/tab.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "NpTab",
+          "declaration": {
+            "name": "NpTab",
+            "module": "lib/tabs/tab.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib/tabs/tabPanel.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "NpTabPanel",
+          "members": [
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "npSelection",
+              "module": "/util/mixins"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "np-tab-panel",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "np-tab-panel",
+          "declaration": {
+            "name": "NpTabPanel",
+            "module": "lib/tabs/tabPanel.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "NpTabPanel",
+          "declaration": {
+            "name": "NpTabPanel",
+            "module": "lib/tabs/tabPanel.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib/tabs/tabs.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "NpTabs",
+          "cssParts": [
+            {
+              "description": "Styles the np-tab container",
+              "name": "tabs"
+            },
+            {
+              "description": "Styles the np-tab-panel container",
+              "name": "content"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Slot for np-tab elements",
+              "name": "tabs"
+            },
+            {
+              "description": "Slot for np-tab-panel elements",
+              "name": "panels"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "tabs",
+              "type": {
+                "text": "Record<string, TabPanelPair> | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "init",
+              "type": {
+                "text": "Record<keyof TabPanelPair, boolean>"
+              },
+              "privacy": "private",
+              "default": "{panel: false, tab: false}"
+            },
+            {
+              "kind": "field",
+              "name": "tabSlot",
+              "type": {
+                "text": "HTMLSlotElement | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "panelSlot",
+              "type": {
+                "text": "HTMLSlotElement | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "currentTab",
+              "type": {
+                "text": "string | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "tabSlotElements",
+              "type": {
+                "text": "NpTab[]"
+              },
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "panelSlotElements",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "onTabSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "onPanelSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setupTabs",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "elements",
+                  "type": {
+                    "text": "NpTab[] | NpTabPanel[]"
+                  }
+                },
+                {
+                  "name": "slot",
+                  "type": {
+                    "text": "keyof TabPanelPair"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "initSelection",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "selectTab",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "tab",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "dispatch",
+                  "optional": true,
+                  "type": {
+                    "text": "boolean"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "np-tabs",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "np-tabs",
+          "declaration": {
+            "name": "NpTabs",
+            "module": "lib/tabs/tabs.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "NpTabs",
+          "declaration": {
+            "name": "NpTabs",
+            "module": "lib/tabs/tabs.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
