@@ -9,16 +9,23 @@ declare global {
 const npSelectable = <TBase extends new (...args: any[]) => HTMLElement>(Base: TBase) => {
     return class NpSelectable extends Base {
         selected = false;
-        name?: string;
+
+        get name() {
+            const nameAttr = this.getAttribute("name");
+            if (nameAttr) {
+                return nameAttr;
+            } else {
+                console.warn(`Missing 'name' attribute on element: %o`, this);
+                return "";
+            }
+        }
+
+        set name(val: string) {
+            this.setAttribute('name', val);
+        }
 
         constructor(...args: any[]) {
             super(args);
-            // TODO: extract the "required attribute" to a helper
-            const nameAttr = this.getAttribute('name');
-            if (!nameAttr) {
-                throw new Error(`Missing 'name' attribute on ${this}`);
-            }
-            this.name = nameAttr;
             this.addEventListener('click', () => this.dispatchSelect());
         }
 

@@ -30,10 +30,12 @@ class NpTabs extends HTMLElement {
     currentTab?: string;
 
     get tabSlotElements(): NpTab[] {
+        // TODO: Add a warning to the end user when filtering out elements.
         return this.tabSlot?.assignedElements().filter((el) => el instanceof NpTab) || [];
     }
 
     get panelSlotElements() {
+        // TODO: Add a warning to the end user when filtering out elements.
         return this.panelSlot?.assignedElements().filter((el) => el && el instanceof NpTabPanel) || [];
     }
 
