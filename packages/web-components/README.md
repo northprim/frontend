@@ -45,6 +45,5 @@ Then, simply use the custom elements in your codebase:
 - Add a changelog for future releases.
 - Add full custom-elements.json generation which all necessary fields/props/attrs/etc.
 - Add per-component documentation showing APIs, basic and advanced usage.
-- Ensure compatibility with all major frameworks (Vue, Angular, React, etc.).
 - Improve build process/workflow (e.g. only publish on `package.json` version change).
 - Revisit `/dist` directory and `package.json > exports` structure in order to ensure tree-shaking and granular imports.
