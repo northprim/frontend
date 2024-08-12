@@ -57,7 +57,7 @@
               "module": "/util/mixins"
             },
             {
-              "name": "npSelection",
+              "name": "npSelectable",
               "module": "/util/mixins"
             }
           ],
@@ -103,7 +103,7 @@
           ],
           "mixins": [
             {
-              "name": "npSelection",
+              "name": "npSelectable",
               "module": "/util/mixins"
             }
           ],

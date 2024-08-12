@@ -1,7 +1,7 @@
-import {npSelection} from "../../util/mixins";
+import {npSelectable} from "../../util/mixins";
 import {NP_ATTR} from "../../util/constants";
 
-class NpTabPanel extends npSelection(HTMLElement) {
+class NpTabPanel extends npSelectable(HTMLElement) {
 
     constructor() {
         super();

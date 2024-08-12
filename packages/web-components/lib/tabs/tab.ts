@@ -1,6 +1,6 @@
-import {npKeyEvents, npSelection} from "../../util/mixins";
+import {npKeyEvents, npSelectable} from "../../util/mixins";
 
-class NpTab extends npKeyEvents(npSelection(HTMLElement)) {
+class NpTab extends npKeyEvents(npSelectable(HTMLElement)) {
 
     constructor() {
         super();

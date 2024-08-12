@@ -6,8 +6,8 @@ declare global {
     }
 }
 
-const npSelection = <TBase extends new (...args: any[]) => HTMLElement>(Base: TBase) => {
-    return class NpSelection extends Base {
+const npSelectable = <TBase extends new (...args: any[]) => HTMLElement>(Base: TBase) => {
+    return class NpSelectable extends Base {
         selected = false;
         name?: string;
 
@@ -45,4 +45,4 @@ const npSelection = <TBase extends new (...args: any[]) => HTMLElement>(Base: TB
 
 }
 
-export {npSelection};
+export {npSelectable};

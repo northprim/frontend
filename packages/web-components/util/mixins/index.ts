@@ -1,4 +1,4 @@
 import {npKeyEvents} from "./keyEvents";
-import {npSelection} from "./selection";
+import {npSelectable} from "./selectable.ts";
 
-export {npKeyEvents, npSelection};
+export {npKeyEvents, npSelectable};
